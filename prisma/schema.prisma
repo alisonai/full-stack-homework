@@ -1,0 +1,28 @@
+generator client {
+    provider = "prisma-client-js"
+      output   = "../node_modules/.prisma/client"
+
+}
+
+datasource db {
+    provider = "postgresql"
+    url  = env("DATABASE_URL")
+}
+
+model Numbers {
+  id    Int    @id @default(autoincrement())
+    value Int
+}
+
+model Grades {
+    id    Int    @id @default(autoincrement())
+    class Class
+    grade Int
+}
+
+enum Class {
+    Math
+    Science
+    History
+}
+
