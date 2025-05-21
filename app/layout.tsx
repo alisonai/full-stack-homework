@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Navigation from "@/components/Navigation";
 
 export default function RootLayout({
   children,
@@ -8,10 +8,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav>
-          <Link href="/numbers" style={{ marginRight: 16 }}>numbers</Link>
-          <Link href="/grades">grades</Link>
-        </nav>
+        <Navigation />
         <main>{children}</main>
       </body>
     </html>
